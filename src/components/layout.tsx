@@ -1,6 +1,11 @@
-import React, { ReactNode } from "react"
-import { Global, css } from "@emotion/core"
-import Header from "./header"
+import React, { ReactNode } from 'react'
+import { Global, css } from '@emotion/core'
+import Navigation from './navigation'
+import tw, { styled } from 'twin.macro'
+
+const Main = styled.main`
+  ${tw`container mx-auto px-4`}
+`
 interface Props {
   children: ReactNode
 }
@@ -19,10 +24,8 @@ export default function Layout({ children }: Props): JSX.Element {
           html,
           body {
             margin: 0;
-            color: #555;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-              Helvetica, Arial, sans-serif, "Apple Color Emoji",
-              "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+              'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             font-size: 14px;
             line-height: 1.4;
             @media (min-width: calc(550px + 10vw)) {
@@ -39,8 +42,7 @@ export default function Layout({ children }: Props): JSX.Element {
           h4,
           h5,
           h6 {
-            color: #222;
-            line-height: 1.1;
+            line-height: 1.4;
             + * {
               margin-top: 0.5rem;
             }
@@ -53,16 +55,8 @@ export default function Layout({ children }: Props): JSX.Element {
           }
         `}
       />
-      <Header />
-      <main
-        css={css`
-          margin: 2rem auto;
-          max-width: 90vw;
-          width: 1820px;
-        `}
-      >
-        {children}
-      </main>
+      <Navigation />
+      <Main>{children}</Main>
     </>
   )
 }

@@ -1,3 +1,3 @@
-import usePosts from "./use-posts"
+import usePosts from './use-posts'
 
 export { usePosts }
