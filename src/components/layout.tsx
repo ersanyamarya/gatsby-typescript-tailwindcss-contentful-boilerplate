@@ -4,7 +4,7 @@ import Navigation from './navigation'
 import tw, { styled } from 'twin.macro'
 
 const Main = styled.main`
-  ${tw`container mx-auto px-4`}
+  ${tw`container px-4`}
 `
 interface Props {
   children: ReactNode

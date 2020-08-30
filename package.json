@@ -13,7 +13,8 @@
     "lint-fix": "eslint --ext ts --fix ./src",
     "lint": "eslint --ext ts ./src",
     "clean": "gatsby clean && rm -rf public",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "*.ts": "eslint"
@@ -24,10 +25,12 @@
     }
   },
   "dependencies": {
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.50",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-sharp": "^2.6.30",
+    "gatsby-plugin-ts-config": "^1.0.0",
     "gatsby-source-contentful": "^2.3.40",
     "gatsby-source-filesystem": "^2.3.27",
     "gatsby-transformer-sharp": "^2.5.13",
@@ -37,6 +40,11 @@
   "devDependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
+    "@graphql-codegen/cli": "^1.17.8",
+    "@graphql-codegen/introspection": "^1.17.8",
+    "@graphql-codegen/typescript": "^1.17.9",
+    "@graphql-codegen/typescript-operations": "^1.17.8",
+    "@graphql-codegen/typescript-react-apollo": "^2.0.6",
     "@types/node": "^14.6.2",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",

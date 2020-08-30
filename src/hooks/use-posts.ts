@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
-interface Post {
+
+import { Query } from '../types/generated'
+export interface Post {
   id: string
   title: string
   slug: string
@@ -8,9 +10,10 @@ interface Post {
   keywords: string[]
   category: string[]
   featuredImage: any
+  content?: string
 }
-export default function usePosts(): Post[] {
-  const data = useStaticQuery(graphql`
+export function usePosts(): Post[] {
+  const data: Query = useStaticQuery(graphql`
     query {
       allContentfulPost {
         nodes {
@@ -38,6 +41,11 @@ export default function usePosts(): Post[] {
               tracedSVG
             }
           }
+          content {
+            childContentfulRichText {
+              html
+            }
+          }
         }
       }
     }
@@ -51,5 +59,6 @@ export default function usePosts(): Post[] {
     description: node.description.description,
     keywords: node.keywords,
     category: node.category,
+    content: node.content.childContentfulRichText.html,
   }))
 }

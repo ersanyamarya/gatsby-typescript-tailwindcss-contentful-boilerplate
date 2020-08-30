@@ -1,3 +1,4 @@
-import usePosts from './use-posts'
+import { usePosts, Post } from './use-posts'
 
 export { usePosts }
+export type { Post }
