@@ -21,7 +21,7 @@ function getPosts(posts: Post[]) {
         <Title>{post.title}</Title>
         <p tw="text-gray-700 text-base">
           {post.description} <br />
-          <Link to={post.slug} tw="text-teal-800 hover:text-teal-500">
+          <Link to={`/blog/${post.slug}`} tw="text-teal-800 hover:text-teal-500">
             continue reading ...
           </Link>
         </p>
