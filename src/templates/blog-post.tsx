@@ -1,16 +1,11 @@
 import React from 'react'
 import { Layout } from '../components'
+
 import tw, { styled } from 'twin.macro'
-import { Post } from '../hooks'
+import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-const HtmlComment = text => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: `<!-- ${text} -->`,
-    }}
-  />
-)
+import { Post } from '../hooks'
 
 function getPost(node: any): Post {
   return {
@@ -25,19 +20,17 @@ function getPost(node: any): Post {
     content: node.content.childContentfulRichText.html,
   }
 }
-const Button = styled.button`
-  ${tw`bg-blue-900 hover:bg-blue-800 text-white p-2 rounded`}
+
+const FeaturedImage = styled(Image)`
+  ${tw`sm:w-9/12 mx-auto rounded overflow-hidden shadow-lg`}
 `
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function BlogPosts({ data }): JSX.Element {
   const { title, featuredImage, content } = getPost(data.contentfulPost)
-  console.log(HtmlComment(content))
-
   return (
     <Layout>
-      <Button>Activate</Button>
       <div>
-        <Image tw="max-w-lg rounded overflow-hidden shadow-lg" fluid={featuredImage} />
+        <FeaturedImage fluid={featuredImage} />
         <h1>{title} </h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
