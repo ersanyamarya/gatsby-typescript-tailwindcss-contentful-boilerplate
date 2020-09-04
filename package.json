@@ -63,7 +63,7 @@
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.13",
+    "lint-staged": "^10.3.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
     "ts-node": "^9.0.0",
