@@ -40,5 +40,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`oswald`, `source sans pro\:300,400,400i,700`],
+        display: 'swap',
+      },
+    },
   ],
 }

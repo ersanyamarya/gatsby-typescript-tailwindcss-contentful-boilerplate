@@ -26,18 +26,13 @@ export default function Layout({ children }: Props): JSX.Element {
           body {
             ${tw`m-0 w-screen h-screen p-0 `}
             font-size:16px;
-            /* margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-              'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-            font-size: 14px;
-            line-height: 1.4;
-            */
+            font-family: oswald;
           }
           h1 {
-            ${tw`text-3xl sm:text-6xl font-sans`}
+            ${tw`text-3xl sm:text-6xl`}
           }
           h2 {
-            ${tw`text-xl font-sans`}
+            ${tw`text-xl`}
           }
           h1,
           h2,
@@ -49,6 +44,9 @@ export default function Layout({ children }: Props): JSX.Element {
             + * {
               margin-top: 0.5rem;
             }
+          }
+          p {
+            ${tw`mt-3 mb-3`}
           }
           strong {
           }

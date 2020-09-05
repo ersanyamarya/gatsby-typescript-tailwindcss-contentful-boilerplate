@@ -7,7 +7,7 @@ import Image from 'gatsby-image'
 import { Link } from 'gatsby'
 
 const Card = styled.div`
-  ${tw`max-w-sm rounded overflow-hidden shadow-lg sm:mx-1 mb-12`}/* &:first-of-type {
+  ${tw`sm:max-w-sm rounded overflow-hidden shadow-lg sm:mx-6 mb-12`}/* &:first-of-type {
     ${tw`md:ml-0 `}
   } */
 `
@@ -45,8 +45,8 @@ function getPosts(posts: Post[]) {
 export default function Blog(): JSX.Element {
   return (
     <Layout>
-      <h1>All the posts </h1>
-      <div tw="block md:flex sm:flex-wrap justify-around">{getPosts(usePosts())}</div>
+      <h1>Blog posts </h1>
+      <div tw="block md:flex sm:flex-wrap justify-center">{getPosts(usePosts())}</div>
     </Layout>
   )
 }
