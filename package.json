@@ -31,7 +31,7 @@
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.39",
-    "gatsby-plugin-ts-config": "^1.0.0",
+    "gatsby-plugin-ts-config": "^1.1.0",
     "gatsby-source-contentful": "^2.3.50",
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-transformer-sharp": "^2.5.17",
