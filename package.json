@@ -32,7 +32,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-ts-config": "^1.1.0",
-    "gatsby-source-contentful": "^2.3.52",
+    "gatsby-source-contentful": "^2.3.53",
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-transformer-sharp": "^2.5.17",
     "react": "^16.14.0",
