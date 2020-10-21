@@ -34,7 +34,7 @@
     "gatsby-plugin-ts-config": "^1.1.0",
     "gatsby-source-contentful": "^3.0.0",
     "gatsby-source-filesystem": "^2.3.35",
-    "gatsby-transformer-sharp": "^2.5.18",
+    "gatsby-transformer-sharp": "^2.5.19",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
