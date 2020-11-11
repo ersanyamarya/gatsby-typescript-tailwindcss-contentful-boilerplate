@@ -1,17 +1,19 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Global, css } from '@emotion/core'
-import Navigation from './navigation'
+import { Navigation, Footer, SEO } from '.'
 import tw, { styled } from 'twin.macro'
+import { COLORS } from './common'
 
 const Main = styled.main`
-  ${tw`px-4 sm:px-10`}
+  ${tw`m-0 z-0`}
 `
 interface Props {
-  children: ReactNode
+  children: JSX.Element | any
 }
 export default function Layout({ children }: Props): JSX.Element {
   return (
     <>
+      <SEO />
       <Global
         styles={css`
           * {
@@ -22,16 +24,33 @@ export default function Layout({ children }: Props): JSX.Element {
           * + * {
             margin-top: 1rem;
           }
+          body::-webkit-scrollbar {
+            display: none;
+          }
+          body: {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+          }
           html,
           body {
             ${tw`m-0 w-screen h-screen p-0 `}
             font-size:16px;
-            font-family: oswald;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fff;
+            color: ${COLORS.accent};
+          }
+          .avatar {
+            ${tw`my-auto ml-auto block rounded-full`}
+            height:5rem;
+            width: 5rem;
           }
           h1 {
-            ${tw`text-3xl sm:text-6xl`}
+            ${tw`text-3xl sm:text-4xl`}
           }
           h2 {
+            ${tw`text-2xl`}
+          }
+          h3 {
             ${tw`text-xl`}
           }
           h1,
@@ -40,23 +59,37 @@ export default function Layout({ children }: Props): JSX.Element {
           h4,
           h5,
           h6 {
-            line-height: 1.4;
-            + * {
-              margin-top: 0.5rem;
-            }
           }
           p {
-            ${tw`mt-3 mb-3`}
+            ${tw`text-lg`}
           }
           strong {
           }
+          .right-top {
+            position: absolute;
+            margin: 2rem;
+            right: 0;
+            z-index: 100;
+          }
+          .right-bottom {
+            position: absolute;
+            margin: 2rem;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+          }
           li {
             margin-top: 0.25rem;
+          }
+          img {
+            padding: 0;
+            margin: 0;
           }
         `}
       />
       <Navigation />
       <Main>{children}</Main>
+      <Footer />
     </>
   )
 }

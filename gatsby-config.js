@@ -7,13 +7,19 @@ module.exports = {
     title: ` Gatsby Typescript Tailwindcss Contentful Boilerplate`,
     siteUrl: `https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/`,
     description: `Gatsby Boilerplate with Typescript`,
+    titleTemplate: '%s · Boiler Plate',
+    url: `https://www.sanyamarya.com`, // no trailing slash!
+    image: '/images/logo.png',
+    owner: 'Boiler Plate',
+    twitterUsername: '@sanyamarya',
+    facebookAppID: '',
   },
   pathPrefix: '/gatsby-typescript-tailwindcss-contentful-boilerplate',
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    '@contentful/gatsby-transformer-contentful-richtext',
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -43,7 +49,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`oswald`, `source sans pro\:300,400,400i,700`],
+        fonts: [`Futura`, `source sans pro:300,400,400i,700`],
         display: 'swap',
       },
     },

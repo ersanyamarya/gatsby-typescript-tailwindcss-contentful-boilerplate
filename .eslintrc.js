@@ -27,11 +27,13 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
+    '@typescript-eslint/no-use-before-define': 'off',
     'prettier/prettier': 'error',
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
+    'no-use-before-define': 'off',
   },
 }

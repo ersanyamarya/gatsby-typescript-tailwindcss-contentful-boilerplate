@@ -1,17 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby'
+import { Post } from '.'
 
 import { Query } from '../types/generated'
-export interface Post {
-  id: string
-  title: string
-  slug: string
-  twitterDescription: string
-  description: string
-  keywords: string[]
-  category: string[]
-  featuredImage: any
-  content?: string
-}
+
 export function usePosts(): Post[] {
   const data: Query = useStaticQuery(graphql`
     query {
@@ -29,6 +20,9 @@ export function usePosts(): Post[] {
           description {
             description
           }
+          childContentfulPostContentRichTextNode {
+            json
+          }
           featuredImage {
             fluid {
               sizes
@@ -39,11 +33,6 @@ export function usePosts(): Post[] {
               srcSetWebp
               srcWebp
               tracedSVG
-            }
-          }
-          content {
-            childContentfulRichText {
-              html
             }
           }
         }
@@ -59,6 +48,6 @@ export function usePosts(): Post[] {
     description: node.description.description,
     keywords: node.keywords,
     category: node.category,
-    content: node.content.childContentfulRichText.html,
+    content: node.childContentfulPostContentRichTextNode.json,
   }))
 }

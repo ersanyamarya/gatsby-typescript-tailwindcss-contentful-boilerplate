@@ -6,6 +6,7 @@ Gatsby Boilerplate with Typescript
 
 # Features
 
--   Tailwindcss
--   Contentful
--   Emotions
+- Tailwindcss
+- Contentful
+- Emotions
+- Typescript
