@@ -11,7 +11,7 @@ interface Post {
   keywords: string[]
   category: string[]
   featuredImage: any
-  body: any
+  body?: any
 }
 interface File {
   fluid: any

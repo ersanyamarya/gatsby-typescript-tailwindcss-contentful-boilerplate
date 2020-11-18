@@ -20,9 +20,6 @@ export function usePosts(): Post[] {
           description {
             description
           }
-          childContentfulPostContentRichTextNode {
-            json
-          }
           featuredImage {
             fluid {
               sizes
@@ -48,7 +45,6 @@ export function usePosts(): Post[] {
     description: node.description.description,
     keywords: node.keywords,
     category: node.category,
-    content: node.childContentfulPostContentRichTextNode.json,
   }))
   return [...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn]
 }
