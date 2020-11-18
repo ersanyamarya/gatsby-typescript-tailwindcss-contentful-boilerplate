@@ -20,9 +20,7 @@ export function useFaqs(): SimpleAccordianDataSchema[] {
   //         description {
   //           description
   //         }
-  //         childContentfulPostContentRichTextNode {
-  //           json
-  //         }
+
   //         featuredImage {
   //           fluid {
   //             sizes
@@ -48,7 +46,6 @@ export function useFaqs(): SimpleAccordianDataSchema[] {
   //   description: node.description.description,
   //   keywords: node.keywords,
   //   category: node.category,
-  //   content: node.childContentfulPostContentRichTextNode.json,
   // }))
   return [
     {

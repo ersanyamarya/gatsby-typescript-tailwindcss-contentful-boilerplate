@@ -20,7 +20,6 @@ function getPost(node: any): Post {
     description: node.description.description,
     keywords: node.keywords,
     category: node.category,
-    body: node.childContentfulPostContentRichTextNode.json,
   }
 }
 
@@ -75,9 +74,6 @@ export const pageQuery = graphql`
           srcWebp
           tracedSVG
         }
-      }
-      childContentfulPostContentRichTextNode {
-        json
       }
     }
   }
