@@ -39,7 +39,7 @@ export function usePosts(): Post[] {
       }
     }
   `)
-  return data.allContentfulPost.nodes.map(node => ({
+  const dataToReturn = data.allContentfulPost.nodes.map(node => ({
     id: node.id,
     featuredImage: node.featuredImage.fluid,
     title: node.title,
@@ -50,4 +50,5 @@ export function usePosts(): Post[] {
     category: node.category,
     content: node.childContentfulPostContentRichTextNode.json,
   }))
+  return [...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn, ...dataToReturn]
 }

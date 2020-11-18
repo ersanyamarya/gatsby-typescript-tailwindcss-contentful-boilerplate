@@ -16,10 +16,9 @@ const Title = styled.span`
 `
 
 function getPosts(posts: Post[]) {
-  posts = [...posts, ...posts, ...posts, ...posts]
   return posts.map(post => (
     <Card key={post.id}>
-      <Image tw="max-w-sm rounded-lg overflow-hidden shadow-lg" fluid={post.featuredImage} />
+      <Image tw="max-w-sm rounded-lg  shadow-lg z-0" fluid={post.featuredImage} />
       <div tw="px-6 py-4">
         <Title>{post.title}</Title>
         <p tw="text-gray-700 text-base">
