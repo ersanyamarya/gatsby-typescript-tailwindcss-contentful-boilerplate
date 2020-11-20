@@ -36,7 +36,7 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-sharp": "^2.9.0",
     "gatsby-plugin-ts-config": "^1.1.1",
-    "gatsby-source-contentful": "^4.0.0",
+    "gatsby-source-contentful": "^4.1.0",
     "gatsby-source-filesystem": "^2.6.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "react": "^16.14.0",
