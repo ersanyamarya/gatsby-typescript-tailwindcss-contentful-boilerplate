@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/blog/the-mass-production/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/blog/running-a-nodejs-server-with-nginx-and-https/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/components/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ersanyamarya.github.io/gatsby-typescript-tailwindcss-contentful-boilerplate/gatsby-typescript-tailwindcss-contentful-boilerplate/services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
