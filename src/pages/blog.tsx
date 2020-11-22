@@ -21,9 +21,9 @@ function getPosts(posts: Post[]) {
       <Image tw="max-w-sm rounded-lg  shadow-lg z-0" fluid={post.featuredImage} />
       <div tw="px-6 py-4">
         <Title>{post.title}</Title>
-        <p tw="text-gray-700 text-base">
+        <p tw="text-base">
           {post.description} <br />
-          <Link to={`/blog/${post.slug}`} tw="text-teal-800 hover:text-gray-500">
+          <Link to={`/blog/${post.slug}`} tw="">
             continue reading ...
           </Link>
         </p>
@@ -32,7 +32,8 @@ function getPosts(posts: Post[]) {
         {post.keywords.map(keyword => (
           <span
             key={keyword}
-            tw="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            tw="inline-block bg-accent-light rounded-full px-3 py-1 text-sm 
+          font-semibold mr-2 mb-2"
           >
             #{keyword}
           </span>

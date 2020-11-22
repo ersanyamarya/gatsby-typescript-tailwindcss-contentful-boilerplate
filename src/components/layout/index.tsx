@@ -1,8 +1,7 @@
 import React from 'react'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 import Footer from './footer'
 import tw, { styled, css } from 'twin.macro'
-import { COLORS } from '../shared'
 import Navigation from './navigation'
 
 const Main = styled.main`
@@ -25,11 +24,9 @@ export default function Layout({ children }: Props): JSX.Element {
           }
           html,
           body {
-            ${tw`m-0 w-screen h-screen p-0 `}
+            ${tw`m-0 w-screen h-screen p-0 text-accent-dark bg-back-light`}
             font-size:16px;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #fff;
-            color: ${COLORS.accentDark};
+            font-family: Futura;
           }
           body::-webkit-scrollbar {
             display: none;
@@ -40,8 +37,6 @@ export default function Layout({ children }: Props): JSX.Element {
           }
           .avatar {
             ${tw`my-auto ml-auto block rounded-full`}
-            height:5rem;
-            width: 5rem;
           }
           h1 {
             ${tw`text-5xl`}
@@ -72,49 +67,33 @@ export default function Layout({ children }: Props): JSX.Element {
           p {
             ${tw`text-lg`}
           }
-          b {
+          b,
+          solid {
             ${tw`font-bold`}
           }
           li {
             margin-top: 0.25rem;
           }
           img {
-            padding: 0;
-            margin: 0;
+            ${tw`p-0 m-0`}
           }
           .right-top {
-            position: absolute;
-            margin: 2rem;
-            right: 0;
-            z-index: 100;
+            ${tw`absolute m-2 z-50 right-0`}
           }
           .right-bottom {
-            position: absolute;
-            margin: 2rem;
-            right: 0;
-            bottom: 0;
-            z-index: 100;
-          }
-          .shadow {
-            box-shadow: 2px 4px 6px #33333366;
+            ${tw`absolute m-2 z-50 right-0 bottom-0`}
           }
           hr {
-            ${tw`h-0 border m-2`}
-            border-color: ${COLORS.primaryDark};
+            ${tw`h-0 border m-2 border-primary-dark`}
           }
-          button {
-            ${tw`px-8 py-3 text-lg font-bold rounded-lg uppercase`}
-            color: ${COLORS.base};
-            background: ${COLORS.primary};
+          .button {
+            ${tw`px-10 py-2 text-lg font-medium rounded-lg uppercase bg-primary
+            transform hover:scale-105 duration-200 shadow-md
+            text-back-light relative overflow-hidden`}
             outline: none !important;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 1px 2px 3px #33333366;
-            &:hover {
-              box-shadow: 2px 4px 6px #33333366;
-            }
+
             &:after {
-              ${tw`block absolute rounded-full opacity-50`}
+              ${tw`block absolute rounded-full opacity-50 bg-primary-dark`}
               content: '';
               left: 50%;
               top: 50%;
@@ -122,7 +101,6 @@ export default function Layout({ children }: Props): JSX.Element {
               height: 300px;
               margin-left: calc(-300px / 2);
               margin-top: calc(-300px / 2);
-              background: ${COLORS.primaryDark};
 
               transform: scale(0);
             }
@@ -151,44 +129,38 @@ export default function Layout({ children }: Props): JSX.Element {
           }
 
           .primary {
-            color: ${COLORS.base};
-            background: ${COLORS.primary};
+            ${tw`text-base bg-primary`}
           }
           .secondry {
-            color: ${COLORS.base};
-            background: ${COLORS.accent};
+            ${tw`text-back-light bg-accent`}
           }
           .base {
-            color: ${COLORS.primaryDark};
-            background: ${COLORS.baseLight};
+            ${tw`text-primary bg-back`}
           }
-          button.secondry:after {
-            background: ${COLORS.accentDark};
+          .button.secondry:after {
+            ${tw` bg-accent-dark`}
           }
           .primaryBorder {
-            ${tw`border-4`}
-            color: ${COLORS.primaryDark};
-            background: ${COLORS.base};
-            border-color: ${COLORS.primaryDark};
+            ${tw`border-3 text-primary-dark bg-back-light border-primary-dark`}
           }
           .secondryBorder {
-            ${tw`border-4`}
-            color: ${COLORS.accentDark};
-            background: ${COLORS.base};
-            border-color: ${COLORS.accentDark};
+            ${tw`border-3 text-accent-dark bg-back-light border-accent-dark`}
           }
-          button.secondryBorder:after {
-            background: ${COLORS.accentDark};
+          .button.secondryBorder:after {
+            ${tw`bg-accent-dark`}
           }
-          .nav-link {
-            ${tw`px-6 py-3 m-0 hover:text-gray-500`}
-            text-decoration: none;
-            &.current-page {
-              ${tw`bg-gray-400 rounded-lg shadow-sm`}
+
+          @keyframes text-focus-in {
+            0% {
+              -webkit-filter: blur(12px);
+              filter: blur(12px);
+              opacity: 0;
             }
-          }
-          path {
-            fill: ${COLORS.primaryDark};
+            100% {
+              -webkit-filter: blur(0px);
+              filter: blur(0px);
+              opacity: 1;
+            }
           }
         `}
       />

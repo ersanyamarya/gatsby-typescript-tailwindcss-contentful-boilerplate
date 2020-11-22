@@ -1,9 +1,9 @@
 // import { graphql, useStaticQuery } from 'gatsby'
-import { SimpleAccordianDataSchema } from '.'
+import { AccordianDataSchema } from '.'
 
 // import { Query } from '../types/generated'
 
-export function useFaqs(): SimpleAccordianDataSchema[] {
+export function useFaqs(): AccordianDataSchema[] {
   // const data: Query = useStaticQuery(graphql`
   //   query {
   //     allContentfulPost {
@@ -52,42 +52,42 @@ export function useFaqs(): SimpleAccordianDataSchema[] {
       id: 'one',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Nulla aute mollit commodo non ea anim do commodo exercitation mollit duis occaecat deserunt. Veniam ut anim enim sint excepteur veniam dolore ex amet aliquip fugiat id. Tempor ut esse adipisicing ea aliquip elit irure sint sunt. Ea duis consequat id aliquip voluptate consectetur eiusmod Lorem laboris sint adipisicing eu est ullamco. Qui aliqua exercitation ad nulla excepteur et. Eiusmod nostrud ut ipsum eiusmod amet proident deserunt non est. Eu id anim et laborum consectetur voluptate irure id eiusmod consectetur.',
       open: true,
     },
     {
       id: 'two',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Laborum ullamco laborum amet reprehenderit aliquip adipisicing cillum aute reprehenderit labore do cupidatat. Pariatur pariatur labore fugiat quis est ut est. Esse magna eiusmod do ipsum dolore. Deserunt sunt laboris magna veniam aliquip cillum mollit eu nostrud quis sunt Lorem nisi.',
       open: false,
     },
     {
       id: 'three',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Duis pariatur dolor Lorem adipisicing in occaecat tempor ea. Reprehenderit do labore ex non. Esse cillum ullamco exercitation ullamco exercitation dolore fugiat sunt cupidatat consequat officia quis ad. Ut adipisicing culpa duis cillum non nostrud veniam culpa occaecat aliqua. Excepteur in excepteur consequat ad duis eiusmod. Nulla mollit aliqua non dolore. Elit eiusmod culpa irure aliqua.',
       open: false,
     },
     {
       id: 'four',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Ut laboris excepteur ad tempor dolor excepteur sunt. Laboris consequat cupidatat est tempor cillum dolor. Nisi occaecat do eiusmod eu consequat cupidatat. Velit dolore nisi irure anim aliquip eiusmod dolore officia sit sit cupidatat in laboris.',
       open: false,
     },
     {
       id: 'five',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Enim nostrud ullamco aliqua deserunt non Lorem in adipisicing deserunt veniam do cupidatat. Minim fugiat excepteur ut anim laboris incididunt ea deserunt ipsum aliquip laboris cupidatat occaecat sit. Anim mollit minim dolor duis.',
       open: false,
     },
     {
       id: 'six',
       title: 'This is a question',
       description:
-        'Ea voluptate anim id officia duis reprehenderit consectetur sint amet ipsum dolor aute. Nisi magna aliqua consequat dolore sint cupidatat esse mollit pariatur aliqua consequat. Mollit cupidatat eu sunt officia pariatur incididunt ad.',
+        'Duis elit ipsum sit irure duis Lorem esse irure consequat elit quis magna elit non. Dolor aute duis nulla nostrud deserunt non. Enim aliqua Lorem mollit nisi cillum cillum ea consequat cupidatat eiusmod sit Lorem aliqua.',
       open: false,
     },
   ]

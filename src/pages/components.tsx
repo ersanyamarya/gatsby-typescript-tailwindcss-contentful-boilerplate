@@ -1,16 +1,16 @@
 import React from 'react'
 import { Layout } from '../components'
 import tw, { styled } from 'twin.macro'
-import { SimpleAccordian } from '../components/shared'
-import { useFaqs } from '../hooks'
+import { PictureAccordian, SimpleAccordian } from '../components/shared'
+import { useFeatures, useFaqs } from '../hooks'
 
-const Hero = styled.div`
-  ${tw`bg-gray-600 block sm:flex px-6 py-6`}
+const Container = styled.div`
+  ${tw`mx-4 lg:mx-56`}
 `
 export default function Home(): JSX.Element {
   return (
     <Layout>
-      <div tw="mx-4 lg:mx-64">
+      <Container>
         <div>
           <h1>Headding 1</h1>
           <h2>Headding 2</h2>
@@ -28,16 +28,17 @@ export default function Home(): JSX.Element {
             consectetur. Sunt consectetur veniam elit ullamco. Fugiat dolore labore deserunt nulla exercitation.
           </p>
         </div>
-        <div tw="flex justify-around my-10 flex-wrap">
-          <button>Button Solid Primary</button>
-          <button className="secondry"> Solid Primary</button>
-          <button className="base"> Solid Base</button>
-          <button className="primaryBorder"> Border Primary</button>
-          <button className="secondryBorder"> Border Primary</button>
+        <div tw="justify-between m-10 flex-wrap h-48 flex content-between place-content-around">
+          <button className="button">Button Solid Primary</button>
+          <button className="button secondry"> Solid Primary</button>
+          <button className="button base"> Solid Base</button>
+          <button className="button primaryBorder"> Border Primary</button>
+          <button className="button secondryBorder"> Border Primary</button>
         </div>
 
         <SimpleAccordian singleOpen accordianData={useFaqs()} />
-      </div>
+        <PictureAccordian singleOpen accordianData={useFeatures()} />
+      </Container>
     </Layout>
   )
 }

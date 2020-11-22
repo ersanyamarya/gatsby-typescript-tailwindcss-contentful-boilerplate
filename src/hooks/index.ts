@@ -1,6 +1,7 @@
 import { usePosts } from './use-posts'
 import { UseSiteMeata } from './use-site-meta'
 import { useFaqs } from './use-faqs'
+import { useFeatures } from './use-features'
 
 interface Post {
   id: string
@@ -19,11 +20,12 @@ interface File {
   title: string
 }
 
-interface SimpleAccordianDataSchema {
+interface AccordianDataSchema {
   id: string
   title: string
   description: string
+  featuredImage?: any
   open: boolean
 }
-export type { Post, File, SimpleAccordianDataSchema }
-export { usePosts, UseSiteMeata, useFaqs }
+export type { Post, File, AccordianDataSchema }
+export { usePosts, UseSiteMeata, useFaqs, useFeatures }

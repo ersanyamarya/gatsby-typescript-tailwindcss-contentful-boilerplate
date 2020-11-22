@@ -3,7 +3,7 @@ import { Layout } from '../components'
 import tw, { styled } from 'twin.macro'
 
 const Hero = styled.div`
-  ${tw`bg-gray-100 block sm:flex px-6 py-6`}
+  ${tw`block sm:flex px-6 py-6`}
 `
 export default function Home(): JSX.Element {
   return (
