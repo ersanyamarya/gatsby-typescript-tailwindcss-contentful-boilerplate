@@ -29,7 +29,7 @@
     "@contentful/rich-text-react-renderer": "^14.1.2",
     "@contentful/rich-text-types": "^14.1.2",
     "@emotion/react": "^11.1.1",
-    "@emotion/core": "^10.0.0",
+    "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.28.0",
