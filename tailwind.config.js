@@ -9,19 +9,19 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       primary: {
-        light: '#DCEDC8',
-        default: '#8BC34A',
-        dark: '#689F38',
+        light: '#B3E5FC',
+        default: '#03A9F4',
+        dark: '#0288D1',
       },
       accent: {
-        light: '#F0F4C3',
-        default: '#CDDC39',
-        dark: '#AFB42B',
+        light: '#B2EBF2',
+        default: '#00BCD4',
+        dark: '#0097A7',
       },
       back: {
-        light: '#FFF',
-        default: '#EEEEEE',
-        dark: '#FBFBFB',
+        light: '#FFFFFF',
+        default: '#DEDEDE',
+        dark: '#BDBDBD',
       },
     },
     extend: {

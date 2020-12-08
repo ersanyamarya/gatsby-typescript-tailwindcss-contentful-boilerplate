@@ -1,26 +1,41 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useState } from 'react'
 import tw, { styled } from 'twin.macro'
 
 const Nav = styled.nav`
-  ${tw`flex items-center px-6 py-2 justify-between bg-primary
-  shadow-lg sticky top-0 z-50`}
+  ${tw`relative bg-primary text-back-light
+  shadow-lg sticky top-0 z-50 h-16`}
   & .nav-link {
-    ${tw`px-6 py-3 m-0 hover:text-primary-light`}
+    ${tw`px-6 py-3 m-0 sm:hover:text-accent-dark`}
     text-decoration: none;
     &.current-page {
-      ${tw`bg-back rounded-lg shadow-sm`}
+      ${tw`bg-back-light rounded-lg shadow-sm text-primary`}
     }
   }
 `
 
+const Menu = styled.div`
+  ${tw`flex items-center flex-col sm:flex-row m-2 h-screen w-screen sm:h-auto sm:w-auto pt-32 sm:p-0
+  transform translate-x-full sm:translate-x-0 top-0 right-0 fixed
+  transition-all duration-300 ease-in-out`}
+
+  &.show {
+    ${tw`translate-x-0 left-0 bg-primary-dark m-0 `}
+  }
+`
+
 export default function Navigation(): JSX.Element {
+  const [showMenus, setMenuShow] = useState(false)
   return (
     <Nav>
-      <span tw="font-semibold text-2xl tracking-tight text-back-dark">
-        <Link to="/">Gatsby Typescript Tailwindcss Contentful Boilerplate</Link>
+      <span tw="z-50 sm:hidden fixed top-0 left-0 my-5 mx-1" onClick={() => setMenuShow(!showMenus)}>
+        📂
       </span>
-      <div tw="flex items-center my-2">
+      <span tw="font-semibold text-2xl tracking-tight text-back-light fixed top-0 left-0 my-4 mx-8 sm:mx-2">
+        <Link to="/">Boilerplate</Link>
+      </span>
+
+      <Menu className={showMenus ? 'show' : ''}>
         <Link className="nav-link" to="/components/" activeClassName="current-page">
           Components
         </Link>
@@ -33,7 +48,7 @@ export default function Navigation(): JSX.Element {
         <Link className="nav-link" to="/blog/" activeClassName="current-page">
           Blog
         </Link>
-      </div>
+      </Menu>
     </Nav>
   )
 }

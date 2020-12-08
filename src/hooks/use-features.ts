@@ -37,7 +37,7 @@ export function useFeatures(): AccordianDataSchema[] {
     description: node.twitterDescription.twitterDescription,
     open: false,
   }))
-  const aa = [...dataToReturn, ...dataToReturn]
+  const aa = [...dataToReturn, dataToReturn[1]]
   const senData = []
   aa.forEach((element, index) => {
     senData.push({

@@ -3,7 +3,7 @@ import React from 'react'
 import tw, { styled } from 'twin.macro'
 
 const FooterContainer = styled.div`
-  ${tw` px-8 pt-8 pb-2 lg:px-20 divide-y bg-accent text-primary-dark`}
+  ${tw` px-8 pt-8 pb-2 lg:px-20 divide-y bg-accent text-primary-dark m-0`}
   & p {
     ${tw`py-1 text-base`}
   }

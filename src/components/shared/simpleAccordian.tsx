@@ -13,11 +13,11 @@ const Accord = styled.div`
   ${tw`m-0`}
 `
 const Title = styled.h3`
-  ${tw`text-xl py-2 block text-primary-dark flex justify-between cursor-pointer hover:px-2
+  ${tw`text-xl py-2 block text-primary-dark flex justify-between cursor-pointer sm:hover:px-2
   transition-all duration-300 ease-in-out`}
 `
 const Description = styled.p`
-  ${tw`py-0 m-0 text-sm lg:text-lg transition-all duration-300 ease-in-out h-0 opacity-0`}
+  ${tw`py-0 m-0 text-lg transition-all duration-300 ease-in-out h-0 opacity-0`}
   &.expand {
     ${tw`p-2 h-auto opacity-100`}
   }

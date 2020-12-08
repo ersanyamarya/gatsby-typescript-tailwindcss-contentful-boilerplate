@@ -11,15 +11,15 @@ interface Props {
 }
 
 const Accord = styled.div`
-  ${tw`m-0 shadow-lg bg-primary-light pb-4`}
+  ${tw`m-0 sm:shadow bg-back-light pb-4`}
 `
 const Title = styled.h3`
-  ${tw`text-xl px-2 text-primary-dark cursor-pointer hover:px-4
+  ${tw`text-xl px-2 text-primary-dark cursor-pointer sm:hover:px-4
   transition-all duration-300 ease-in-out`}
 `
 const Description = styled.p`
-  ${tw`px-2 m-0 w-0 h-0 opacity-0  md:flex md:flex-row text-accent-dark
-  transition-all duration-300 ease-in-out text-sm lg:text-lg
+  ${tw`px-2 m-0 w-0 h-0 opacity-0 md:flex md:flex-row text-accent-dark
+  transition-all duration-300 ease-in-out text-lg
  `}
   &.expand,
   &.expand > * {
@@ -27,14 +27,6 @@ const Description = styled.p`
     animation: text-focus-in 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
 `
-// const Icon = styled.svg`
-//   ${tw`w-5 group-hover:w-6 m-0 p-0 transition-all duration-300 ease-in-out fill-current`}
-
-//   &.rotate {
-//     transform: rotateX(180deg);
-//   }
-// `
-
 export default function PictureAccordian({
   singleOpen = false,
   hoverToOpen = false,
@@ -75,7 +67,7 @@ export default function PictureAccordian({
             </Title>
             <Description className={faq.open ? 'expand' : ''}>
               <span tw="flex-1 mx-2"> {faq.description}</span>
-              <Image fluid={faq.featuredImage} tw="flex-1 mx-2" />
+              <Image fluid={faq.featuredImage} tw="flex-1 m-2" />
             </Description>
           </Accord>
         ))}

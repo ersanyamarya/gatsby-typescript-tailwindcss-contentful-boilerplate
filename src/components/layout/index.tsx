@@ -88,7 +88,7 @@ export default function Layout({ children }: Props): JSX.Element {
           }
           .button {
             ${tw`px-10 py-2 text-lg font-medium rounded-lg uppercase bg-primary
-            transform hover:scale-105 duration-200 shadow-md
+            transform sm:hover:scale-105 duration-200 shadow-md
             text-back-light relative overflow-hidden`}
             outline: none !important;
 

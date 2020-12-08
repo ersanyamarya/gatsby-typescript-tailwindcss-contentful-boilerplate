@@ -76,19 +76,5 @@ export function useFaqs(): AccordianDataSchema[] {
         'Ut laboris excepteur ad tempor dolor excepteur sunt. Laboris consequat cupidatat est tempor cillum dolor. Nisi occaecat do eiusmod eu consequat cupidatat. Velit dolore nisi irure anim aliquip eiusmod dolore officia sit sit cupidatat in laboris.',
       open: false,
     },
-    {
-      id: 'five',
-      title: 'This is a question',
-      description:
-        'Enim nostrud ullamco aliqua deserunt non Lorem in adipisicing deserunt veniam do cupidatat. Minim fugiat excepteur ut anim laboris incididunt ea deserunt ipsum aliquip laboris cupidatat occaecat sit. Anim mollit minim dolor duis.',
-      open: false,
-    },
-    {
-      id: 'six',
-      title: 'This is a question',
-      description:
-        'Duis elit ipsum sit irure duis Lorem esse irure consequat elit quis magna elit non. Dolor aute duis nulla nostrud deserunt non. Enim aliqua Lorem mollit nisi cillum cillum ea consequat cupidatat eiusmod sit Lorem aliqua.',
-      open: false,
-    },
   ]
 }
